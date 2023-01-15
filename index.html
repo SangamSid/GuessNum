@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="centercontainer">
+        <div class="content">
+          <div class="header">
+            <div class="text">
+              <pre>
+ Guess The Random Number Between
+                            1 and 100
+                    </pre
+              >
+            </div>
+          </div>
+
+          <img
+            src="https://th.bing.com/th/id/OIP.fk_5AHpga_Pke2gk2xKEngHaFo?pid=ImgDet&rs=1"
+            alt="dice"
+          />
+        </div>
+        <div class="selectionHeader">
+          <pre id="select">Select The Difficulty</pre>
+          <button class="btn" onclick="easyMode()">Easy-You get 10 attempt</button>
+          <button class="btn" onclick="hardMode()">Hard-You get 5 attempt</button>
+        </div>
+      </div>
+
+      <!-- after clicking button we got this page  it is game area-->
+
+      <div id="gamearea">
+        <div class="newgamebutton">
+          <button id="newgame" onclick="newgame()">New Game</button>
+        </div>
+        <section>
+          <h3 id="yourguess">Your Guess</h3>
+          <input
+            type="number"
+            placeholder="Enter your Guess"
+            min="1"
+            max="100"
+            id="inputbox"
+            onchange="compareGuess()"
+            
+      
+          />
+        </section>
+
+        <section class="stats">
+          <div class="info">
+            <p>Number of previous attempt</p>
+            <span id="attempts">0</span>
+          </div>
+
+          <div class="guess">
+            <p>Number that you Guessed</p>
+            <span id="guessValue">0</span>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
